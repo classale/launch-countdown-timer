@@ -1,4 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Red+Hat+Text:300,regular,500,600,700,300italic,italic,500italic,600italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Red+Hat+Text:300,regular,500,600,700,300italic,italic,500italic,600italic,700italic);@import url(https://fonts.googleapis.com/css?family=Red+Hat+Mono:300,regular,500,600,700,300italic,italic,500italic,600italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Red+Hat+Mono:300,regular,500,600,700,300italic,italic,500italic,600italic,700italic);
 
 * {
     margin: 0;
@@ -6,6 +7,7 @@
     box-sizing: border-box;
     color: white;
     font-family: "Red Hat Text", Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
 }
 
 body {
@@ -13,6 +15,7 @@ body {
     grid-template-rows: 3fr 5fr 2fr;
     height: 100vh;
     background: no-repeat center bottom / contain url("../assets/background.svg"), linear-gradient(180deg, #1D1E28 0.12%, #261C2D 94.84%, #261A2D 100%);
+
 }
 
 header, main, footer {
@@ -30,6 +33,7 @@ header h1 {
 footer .socials {
     display: flex;
     gap: 24px;
+    list-style-type: none;
 }
 
 footer svg path {
@@ -50,6 +54,25 @@ footer svg:hover path {
 }
 
 .timebox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.text {
+    letter-spacing: 5.92px;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    color: #8385A9;
+    font-weight: bold;
+    padding: 8px;
+}
+
+.box {
+    position: relative;
     font-size: 14px;
     color: #8385A9;
     letter-spacing: 5.92px;
@@ -57,21 +80,55 @@ footer svg:hover path {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 12px 0 #191A23;
+    margin-bottom: 12px;
 }
 
-.timebox > div {
+.timebox .box > span {
     font-size: 80px;
     color: #FB5E84;
     font-weight: bold;
-    letter-spacing: -2.4px;
     padding: 16px;
+    font-family: "Red Hat Mono", Arial, Helvetica, sans-serif   ;
 }
 
-.timebox:before {
+.box:before, .box:after {
+    z-index: -1;
     content: "";
+    position: absolute;
     height: 50%;
     width: 100%;
+    border-radius: 8px;
+}
+
+.box:before {
     top: 0;
-    background-color: #000;
-    opacity: 15.06%;
+    background-color: #2C2E44;
+}
+
+.box:after {
+    bottom: 0;
+    background-color: #343650;
+}
+
+.box .circles {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #191A23;
+    border-radius: 145454564564564564564563454645621523485645634156347896452348567456489675642345637489px;
+}
+
+.box .circles.left {
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box .circles.right {
+    right: 0;
+    top: 50%;
+    transform: translate(50%, -50%);
 }
