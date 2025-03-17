@@ -1,0 +1,77 @@
+@import url(https://fonts.googleapis.com/css?family=Red+Hat+Text:300,regular,500,600,700,300italic,italic,500italic,600italic,700italic);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: "Red Hat Text", Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 3fr 5fr 2fr;
+    height: 100vh;
+    background: no-repeat center bottom / contain url("../assets/background.svg"), linear-gradient(180deg, #1D1E28 0.12%, #261C2D 94.84%, #261A2D 100%);
+}
+
+header, main, footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 {
+    font-size: 22px;
+    letter-spacing: 7.5px;
+}
+
+footer .socials {
+    display: flex;
+    gap: 24px;
+}
+
+footer svg path {
+    color: #8385A9;
+}
+
+footer svg {
+    cursor: pointer;
+}
+
+footer svg:hover path {
+    color: #FB5E84;
+}
+
+.time    {
+    display: flex;
+    gap: 32px;
+}
+
+.timebox {
+    font-size: 14px;
+    color: #8385A9;
+    letter-spacing: 5.92px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timebox > div {
+    font-size: 80px;
+    color: #FB5E84;
+    font-weight: bold;
+    letter-spacing: -2.4px;
+    padding: 16px;
+}
+
+.timebox:before {
+    content: "";
+    height: 50%;
+    width: 100%;
+    top: 0;
+    background-color: #000;
+    opacity: 15.06%;
+}
